@@ -1,6 +1,9 @@
 void pause(){
   
   
+  fill(0);
+  textSize(80);
+  text("PAUSED", 450,450);
   
   
   
@@ -11,7 +14,7 @@ void pause(){
 }
 void pauseClicks() {
   
-  
+  mode = GAME;
   
   
 }
