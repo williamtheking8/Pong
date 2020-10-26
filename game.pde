@@ -1,4 +1,6 @@
 void game() {
+  
+  //background detail
   background(#FFBB4D);
   fill(#FFBB4D);
   stroke(255);
@@ -26,7 +28,7 @@ void game() {
     }
   }
 
-
+  //Score display
   stroke(0);
   strokeWeight(5);
   fill(5, 63, 23);
@@ -53,6 +55,7 @@ void game() {
   }
   timer = timer -1;
 
+//SCORING
   if (ballx > width+50) {
     ballxv = random(-5, 5);
     ballyv = random(-5, 5);
@@ -125,15 +128,9 @@ void game() {
     ballxv = ballxv + 2;
   }
 
+
+    // PHYSICS
   if ( dist(ballx, bally, leftx, lefty) <= (balld/2 +leftd/2)) {
-   if(bally > lefty){
-     if(skey == true){
-    ballxv = (ballx-leftx)/10;
-    ballyv = 8+(bally-lefty)/10;
-    lpaddle.rewind();
-    lpaddle.play();
-     }
-   } else
     ballxv = (ballx-leftx)/10;
     ballyv = (bally-lefty)/10;
     lpaddle.rewind();

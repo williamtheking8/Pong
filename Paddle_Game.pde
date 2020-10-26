@@ -76,6 +76,7 @@ void setup() {
 
 
 void draw() {
+  intro.play();
   if (mode == INTRO) {
     intro();
   } else if (mode == GAME){

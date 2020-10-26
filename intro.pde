@@ -1,16 +1,20 @@
 void intro() {
   
+  //title timer
   pongtime++;
-  intro.rewind();
-  intro.play();
+  
   
   background(12,32,54);
+  
+  //1 player
   fill(140,83,255);
   tactR(100,500,300,200);
   
+  //2 player
   fill(140,83,255);
   tactR(500,500,300,200);
   
+  //TITLE LOGIC ////////////////////////////////////////////////////////////////////////
   if(pongtime < 50) {
   fill(124,43,152);
   textSize(200);
@@ -64,7 +68,9 @@ void intro() {
   if(pongtime > 350 ) {
     pongtime = 0;
   }
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   
+  //words
   fill(255);
   textSize(50);
   text("1 Player", 250,600);
@@ -77,12 +83,14 @@ void introClicks() {
     AI = true;
     intro.rewind();
     intro.pause();
+    pongtime = 0;
   }
    if(mouseX > 500 && mouseX < 800 && mouseY > 500 && mouseY < 700){
     mode = GAME;
     AI = false;
     intro.rewind();
     intro.pause();
+    pongtime = 0;
    }
   
   
